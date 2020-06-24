@@ -3,7 +3,6 @@ const fetch = require("node-fetch");
 const cors = require("cors");
 const app = express();
 
-// corse
 app.use(cors());
 
 app.get("/", (req, res) => {
@@ -52,7 +51,7 @@ app.get("/route", (req, res) => {
     .catch((error) => console.log(error));
 });
 //Listen to port 3000 or any available
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Server started on port: ${PORT}`);
