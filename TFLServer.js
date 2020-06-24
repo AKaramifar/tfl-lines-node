@@ -2,8 +2,17 @@ const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
 
+app.get("/", (req, res) => {
+  res.json({
+    App: "TFL Lines Node js",
+    Company: "Code Your Future"
+  });
+});
 app.get("/developer", (req, res) => {
-  res.send("Afshin Karamifar");
+  res.json({
+    Full_Name: "Afshin Karamifar",
+    Position: "Trainee at Code Your Future"
+  });
 });
 app.get("/mode", (req, res) => {
   fetch("https://api.tfl.gov.uk/Line/Meta/Modes")
