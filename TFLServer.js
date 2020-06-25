@@ -8,13 +8,10 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.json({
     App: "TFL Lines Node js",
-    Company: "Code Your Future"
-  });
-});
-app.get("/developer", (req, res) => {
-  res.json({
-    Full_Name: "Afshin Karamifar",
-    Position: "Trainee at Code Your Future"
+    Student_FullName: "Afshin Karamifar",
+    Position: "Trainee at Code Your Future",
+    Company: "Code Your Future",
+    URL: "https://codeyourfuture.io/"
   });
 });
 app.get("/mode", (req, res) => {
